@@ -1,0 +1,626 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+  html{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  }
+  section#parent{
+    display: flex;
+    flex-flow: column wrap;
+  }
+  
+  header{
+  grid-column: 1 /span 2;
+  background-color: #1f2937;
+  height: 3rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-left: 1em;
+  }
+  
+  
+  header p#logotitle{
+    color: #fff;
+  }
+  
+  header img{
+    max-width: 1.2em;
+    height: auto;
+  }
+  
+  .centralstyle{
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100vh;
+    background-color: #f3f4f6;
+  }
+  
+  .asidestyle{
+    display: flex;
+    flex-flow: column wrap;
+    background: #fff;
+    padding-top: 1em;
+    width:15%;
+    border-right: 2px solid #e8eaed;
+  }
+  
+  .menu{
+    display: flex;
+    flex-flow: row nowrap;
+    padding: .5em;
+  }
+  
+  div.menu{
+    width: 100%;
+  }
+  header img{
+    width: 2em;
+    margin-right: 1em;
+  }
+  aside div.menu img{
+     width: 4em;
+  }
+  
+  div.menu button{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor:pointer;
+  }
+  
+  div.menu button:hover{
+    background-color: #f3f4f6;
+  }
+  
+  aside div.menu button{
+    border: none;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    background-color: #fff;
+  }
+  
+  section#change{
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-self: center;
+    width:100%;
+  }
+  section#change form {
+    display: flex;
+    flex-flow: column wrap;
+    width: 40%;
+    padding: 2em 3em 3em 3em;
+    margin: 4em;
+    align-self: center;
+    justify-self: center;
+  }
+  
+  section#change form#contactform, section#change form#userform{
+    width: 90%;
+  }
+  
+  section#change form h1.formtitle{
+    text-align: center;
+    font-size: 2em;
+  }
+  
+  section#change form div.formgrp{
+    display: flex;
+    flex-flow: column wrap;
+    margin-bottom: 0.75em;
+  }
+  
+  section#change form h1.formtitle{
+    margin-bottom: 1em;
+  }
+  
+  
+  .inputnormal{
+    height:3em;
+    border-radius: 0.5em;
+    border:none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    margin-top:0.5em;
+    margin-bottom:1em;
+    padding-left: 1em;
+  }
+  
+  .inputerror{
+  height:3em;
+  border-radius: 0.5em;
+  border: 1px solid red;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  margin-top:0.5em;
+  margin-bottom:1em;
+  padding-left: 1em;
+  }
+  
+  .txtANormal{
+  border: 1px solid black;
+  }
+  .txtAErr{
+  border: 1px solid red;
+  }
+  
+  .contactinput{
+    width: 90%;
+  }
+  
+  .userinput{
+    width: 90%;
+  }
+  
+  #title.contactinput {
+    width: 15%;
+  }
+  
+  button#submitbtn{
+    background: #4f46e5;
+    color: #fff;
+    height:3em;
+    border-radius: .5em;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding-left: 1em;
+  }
+  
+  button#submitbtn img{
+    max-width: 2em;
+    height: auto;
+    vertical-align: middle;
+    justify-content: left;
+  }
+  
+  button#submitbtn > span{
+    vertical-align: middle;
+    padding-left: 15.2em;
+  }
+  
+  button#submitbtn:hover{
+    border: 2px solid  #6366f1;
+    border-radius: .5em;
+    cursor:pointer;
+    background: #fff;
+    color: #6366f1;
+  }
+  
+  footer{
+    text-align: center;
+  }
+  
+  footer hr{
+    border: none;
+    width: 95%;
+    margin: auto;
+    background-color: #f3f3f4;
+    height: 1px;
+    margin-bottom: 2em;
+  }
+  
+  .hide{
+    display: none;
+  }
+  
+  .fail{
+  display: block;
+  background: #ff9494;
+  color: #8B0000;
+  margin-bottom: 1em;
+  padding: .5em;
+  border-radius: 1em;
+  }
+  
+  div#userstatus, div#contactstatus, div#notestatus{
+  width: 90%;
+  }
+  
+  .success{
+  display: block;
+  background: #4bb543;
+  color: #000;
+  margin-bottom: 1em;
+  padding: .5em;
+  border-radius: 1em;
+  }
+  
+  .asidestyle hr{
+    border: none;
+    width: 90%;
+    background-color: #f6f7f8;
+    height: 1.5px;
+    margin: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .contacttable, .usertable{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    text-align: left;
+  }
+  
+  .usertable{
+    margin-top: 2em;
+  }
+  
+  table#contacttable thead, table#usertable thead{
+    background: #f3f4f6;
+    margin-right: 1em;
+  }
+  
+  table#contacttable tr td a{
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  table#contacttable tr td span.fullname, table#usertable tr td span.fullname{
+    font-weight: bold;
+  }
+  
+  table#contacttable tr td, table#usertable tr td{
+    margin-bottom: 2em;
+    margin-top: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+  }
+  
+  table#contacttable thead tr th, table#usertable thead tr th{
+    margin-bottom: 2em;
+    margin-top: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+  }
+  
+  table#contacttable thead tr th:nth-child(4){
+    padding-left: 4.5em;
+  }
+  
+  table#contacttable tr td:nth-child(4){
+    padding-left: 7em;
+  }
+  
+  table#contacttable tr td:nth-child(4) a{
+    padding-left: 4em;
+  }
+  
+  table#contacttable tr td#support span{
+    background: #6366f1;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    border-radius: .2em;
+    padding:0 1em 0 1em;
+    margin-left: 0.6em;
+    margin-right: 0.5em;
+  }
+  
+  table#contacttable tr td#SalesLead span{
+    background: #fcd34d;
+    color: #000;
+    text-align: center;
+    justify-content: center;
+    border-radius: .2em;
+    padding:0 1em 0 1em;
+  }
+  
+  section.contactlistheadparent, section.userlistheadparent, section.formheadparent, section#contacthead, section#contactinfo{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 90%;
+    margin-top:2em;
+  }
+  
+  section.contactlistheadparent h1.contactlisthead, section.userlistheadparent h1.userlisthead{
+    text-align: left;
+    font-size: 3em;
+  }
+  
+  section.contactlistheadparent button#createcontactbtn, section.userlistheadparent button#createuserbtn, section.formfootparent button#addcontactbtn, button#addnotebtn, section.formfootparent button#adduserbtn{
+    padding: .5em;
+    border:none;
+    border-radius: .2em;
+    width: 12em;
+    color: #fff;
+    background:#4f46e5;
+  }
+  
+  section.contactlistheadparent button#createcontactbtn:hover, section.userlistheadparent button#createuserbtn:hover, section.formfootparent button#addcontactbtn:hover, button#addnotebtn:hover, section.formfootparent button#adduserbtn:hover{
+    background: #fff;
+    color: #4f46e5;
+    border: solid #4f46e5 .2em;
+    cursor: pointer;
+  }
+  
+  section.contactlistheadparent button#createcontactbtn, section.userlistheadparent button#createuserbtn, section#filter{
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  section.contactlistheadparent button#createcontactbtn svg, section.userlistheadparent button#createuserbtn svg{
+    width: 15px;
+    height: auto;
+    margin: 0 2em 0 1em;
+    fill: #fff;
+  }
+  section.contactlistheadparent button#createcontactbtn:hover svg, section.userlistheadparent button#createuserbtn:hover svg{
+    fill: #4f46e5;
+  }
+  
+  section.userlistheadparent button#createuserbtn{
+    width: 11em;
+  }
+  section.contactlistfootparent, section.userlistfootparent, section.formfootparent{
+    background: #fff;
+    justify-content: space-between;
+    width: 90%;
+    margin-top:2em;
+    border-radius: .2em;
+  }
+  
+  section#filter span{
+    font-weight: bold;
+  }
+  
+  section#filter svg{
+    width: 20px;
+    height: auto;
+    transform: scaleX(-1); 
+    margin-right: 0.7em;
+  }
+  
+  section.contactlistfootparent table, section.userlistfootparent table{
+    width: 95%;
+    border-spacing: 0;
+    border-radius: 0.2em;
+    border: solid #f2f3f5 .1em;
+    justify-content: center;
+  }
+  
+  section.contactlistfootparent table td, section.contactlistfootparent table th, section.userlistfootparent table td, section.userlistfootparent table th{
+    border-bottom: solid #f2f3f5 .1em;
+  }
+  
+  section.contactlistfootparent table tr:last-child > td, section.userlistfootparent table tr:last-child > td{
+    border-bottom: none;
+  }
+  
+  section#filter{
+    margin-top: 1em;
+    padding-left: 2em;
+  }
+  
+  section#filter span{
+    padding-right: 2em;
+  }
+  
+  section#filter button{
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    /*optional*/
+    font-family: arial, sans-serif;
+    /*input has OS specific font-family*/
+    color: #069;
+    cursor: pointer;
+  }
+  
+  section#filter button{
+    margin-right: 2em;
+  }
+  
+  section#filter button {
+    display: inline-block;
+    position: relative;
+    color: #747a87;
+  }
+  
+  .active{
+    color: #6366f1!important;
+    text-decoration: underline #6366f1;
+    text-decoration-thickness: 2.5px;
+  }
+  
+  table#contactformtable, table#userformtable{
+    width: 95%;
+    margin: 2em;
+  }
+  
+  section.formfootparent tr.buttonrow{
+    background-color: #f9fafb;
+  }
+  
+  section.formfootparent tr.buttonrow td{
+    text-align: right;
+  }
+  
+  section.formfootparent button#addcontactbtn, section.formfootparent button#adduserbtn{
+    width: 4em;
+    border-radius: 0.4em;
+    margin: 1em 4em;
+  }
+  
+  
+  div#contactpage{
+    width: 100%;
+    background-color: #fff;
+  }
+  
+  div#contactparent{
+    background-color: #fff;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-self: center;
+  }
+  
+  section#contacthead img{
+    max-width: 3em;
+    height: auto;
+    background-color: #d1d5db;
+    border-radius: 100%;
+    margin-right: 0.5em;
+  }
+  
+  div#contactdetails{
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  
+  table#contactinfotable{
+    width: 95%;
+    margin: 2em;
+  }
+  
+  table#contactinfotable tr:nth-child(2) > td{
+    padding-bottom: 2em;
+  }
+  
+  table#contactinfotable span.label{
+    font-weight: bold;
+  }
+  
+  section#contactnotes{
+    justify-content: space-between;
+    width: 90%;
+    margin-top:2em;
+  }
+  
+  section#contactinfo, section#contactnotes{
+    border: solid 2px #c3c3c3;
+    border-radius: .4em;
+  }
+  
+  
+  section#contactnotes div{
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  
+  section#contactnotes div:first-child{
+    display: flex;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  
+  section#contactnotes div:last-child{
+    margin-bottom: 0;
+  }
+  
+  section#contactnotes svg{
+    width: 25px;
+    height: auto;
+    padding-right: 0.5em;
+  }
+  
+  section#contactnotes div:last-child{
+    background-color: #f3f4f6;
+  }
+  
+  form#noteform{
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  table#noteformtable tr:nth-child(1) > td{
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  
+  textarea#comment{
+    width: 100%;
+  }
+  
+  table#notebuttontable td:last-child{
+    text-align: right;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  
+  button#addnotebtn{
+    width: 90px;
+    border-radius: 0.4em;
+  }
+  
+  button#assigntome{
+    border-radius: 0.4em;
+    padding: .5em;
+    border:none;
+    width: 12em;
+    height: 40px;
+    color: #000;
+    background:#4ade80;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  button#assigntome:hover{
+    background: #fff;
+    color: #4ade80;
+    border: solid #4ade80 .2em;
+    cursor: pointer;
+    height: 40px;
+  }
+  
+  button#assigntome img{
+    background-color: #4ade80;
+    width: 20px;
+    height: auto;
+    margin-left: 1em;
+  }
+  
+  button#assigntome:hover img{
+    background-color: #fff;
+  }
+  
+  button#switchtoother{
+    border-radius: 0.4em;
+    padding: .5em;
+    border:none;
+    width: 14em;
+    color: #000;
+    background:#fbbf24;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  button#switchtoother:hover{
+    background: #fff;
+    color: #fbbf24;
+    border: solid #fbbf24 .2em;
+    cursor: pointer;
+  }
+  
+  button#switchtoother svg{
+    width: 25px;
+    height: auto;
+    padding-right: 0.5em;
+    margin-left: 0.5em;
+  }
