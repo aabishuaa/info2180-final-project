@@ -1,1 +1,1 @@
-# info2180-final-project
+This is the final INFO2180 project for GROUP #23.
