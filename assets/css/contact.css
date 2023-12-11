@@ -1,0 +1,168 @@
+.container:not(:has(.contact-warning-container)) { background-color: white; }
+
+.contact-info-container {
+    background-color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.contact-title {
+    display: flex;
+    gap: 12px;
+}
+
+.title-info p { color: #1f2937; }
+
+.profile {
+    width: 72px;
+    height: 72px;
+    outline:4px solid black;
+    border-radius: 100%;
+    background-image: url(../images/profile.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #F3F4F6;
+}
+
+.title-button-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.title-button-container a:not(.switch-to-support) { 
+    color: black; 
+}
+
+.title-button-container a:nth-of-type(1) { background-color: #04f066; }
+.title-button-container a:nth-of-type(1):hover { background-color: #04ca56; }
+
+.title-button-container a:nth-of-type(2):not(.switch-to-support) { background-color: #f0d404; }
+.title-button-container a:nth-of-type(2):not(.switch-to-support):hover { background-color: #c3ad05; }
+
+
+.contact-personal-info ,.notes-container {
+    border: 1px solid #d8dadd;
+    border-radius: 5px;
+}
+
+.contact-personal-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding: 16px;
+}
+
+.info-container p:first-of-type {
+    color: #1f2937c0;
+    font-weight: bold;
+}
+
+.notes-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+    border-bottom: 1px solid #F3F4F6;
+    padding: 18px 16px;
+}
+
+.notes, .note {
+    display: flex;
+    flex-direction: column;
+}
+
+.notes { 
+    gap: 36px; 
+    padding: 36px 16px;
+}
+
+.note { gap: 8px; }
+.note .title { font-weight: bold; }
+.note .body { color: #1f2937; }
+.note .date { color: #1f2937c0; }
+
+.add-note {
+    background-color: #F3F4F6;
+    padding: 16px;
+}
+
+.add-note p { 
+    font-weight: bold;
+    color: #1f2937;  
+    padding-bottom: 16px;
+}
+
+.add-note form { gap: 16px;}
+
+.add-note form textarea {
+    grid-column: 1/3;
+    grid-row: 1;
+    outline: none;
+    border: 1px solid #d8dadd;
+    border-radius: 5px;
+    padding: 16px;
+    max-width: inherit;   
+}
+
+.add-note-btn {
+    grid-column: 1/3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-note-btn:has(.hide) {
+    justify-content: end;
+
+}
+
+.add-note-btn p, .assign-warning {
+    padding-bottom: 0;
+    font-weight: normal;
+    color: #f00404;
+}
+
+.assign-warning {
+    text-align: center;
+    padding-right: 8px;
+}
+
+.add-note-btn button {
+    padding: 12px 18px;
+    background-color: #0093b8;
+    color: white;
+    cursor: pointer;
+    
+}
+
+.add-note-btn button:hover {
+    background-color: #00718e;
+}
+
+.hide { display: none; }
+
+.contact-warning-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 24px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.contact-warning {
+    background-color: #f3f4f6a3;
+    padding: 18px 0;
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #5e5f61;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.contact-warning span { text-decoration: underline; }

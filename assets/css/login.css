@@ -1,0 +1,74 @@
+.login {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    margin: 0 auto;
+    gap: 64px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+form input, form button {
+    width: 100%;
+    padding: 12px 8px;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form input { border: 1px solid #919191; }
+
+form button {
+    border: 1px solid #3017d0;
+    background-color: #3017d0;
+    color: white;
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.1);
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+form button div {
+   height: 32px;
+   width: 32px;
+   background-image: url(../images/lock.png);
+   background-repeat: no-repeat;
+   background-size: contain;
+   left: 8px;
+   position: absolute;
+   transition: 0.3s;
+}
+
+form button:hover { background-color: #3017d0; }
+
+.message {
+    padding: 0 24px;
+    background-color: #04f06632;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 48px; 
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hide { display: none; }
+.input-warning { border: 1px solid #f00404; }
+
+
