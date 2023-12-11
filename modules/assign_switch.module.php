@@ -47,12 +47,12 @@ if(!empty($_SESSION["current_contact"])) {
 <?php } else { ?>
     <?php if($where["type"]=="Sales Lead") { ?>
         <a href="#" id="switch" class="switch-to-support" >
-            <span><img src="assets/images/switch-light.svg"  width="32px" alt="switch to support"></span>
+            <span><img src="assets/images/switch.png"  width="32px" alt="switch to support"></span>
             Switch to Support
         </a>
     <?php } else { ?>
         <a href="#" id="switch" class="switch-to-sales" >
-            <span><img src="assets/images/switch.svg"  width="32px" alt="switch to sales lead"></span>
+            <span><img src="assets/images/switch.png"  width="32px" alt="switch to sales lead"></span>
             Switch to Sales Lead
         </a>
     <?php } ?>

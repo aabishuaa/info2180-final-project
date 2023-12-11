@@ -53,8 +53,6 @@ $title = "New Contact";
                     <label for="telephone">Telephone</label>
                     <input type="text" id="telephone" name="telephone" placeholder="000-000-0000" required pattern="\d{3}-\d{3}-\d{4}" autocomplete="off">
                     <p class="telephone-error input-error hide"></p>
-
-
                 </div>
 
                 <div class="input-container">
@@ -94,3 +92,5 @@ $title = "New Contact";
 
 </body>
 </html>
+
+

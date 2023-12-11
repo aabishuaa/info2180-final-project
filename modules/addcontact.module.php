@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if(empty($errors)) {
             foreach ($_POST as $key=> $value) {
-                $_POST[$key] = trim($value);
+                $_POST[$key] = strip_tags(trim($value));
             }   
             insert("contacts", [$_POST["title"], $_POST["firstname"], $_POST["lastname"], $_POST["email"], $_POST["telephone"], $_POST["company"], $_POST["type"], users_id_by_name($_POST["assigned_to"]), user_info("id"), date('Y-m-d H:i:s'), date('Y-m-d H:i:s')]);
         }
@@ -32,3 +32,4 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 echo json_encode($errors);
 ?>
+

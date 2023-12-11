@@ -15,14 +15,14 @@ $title = "Dashboard";
     <div class="container">
         <div class="page-title">
             <h1>Dashboard</h1>
-            <a href="addcontact.php"><span><img src="assets/images/add.svg"  width="32px" alt="add contact"></span>Add Contact</a>
+            <a href="addcontact.php"><span><img src="assets/images/add.png"  width="20px" alt="add contact"></span>Add Contact</a>
         </div>
         <div class="content-container">
 
             <div class="filter-container">
 
                 <div class="filter-text">
-                    <img src="assets/images/filter.svg" alt="filter" width="32px" src="">
+                    <img src="assets/images/filter.png" alt="filter" width="18px" src="">
                     <p>Filter By:</p>
                 </div>
 

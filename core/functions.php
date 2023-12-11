@@ -14,7 +14,7 @@ function is_loggedin() {
 
 function is_admin() {
     if(array_key_exists('user_data',$_SESSION)) {
-        if ($_SESSION['user_data']['role'] === "Admin"){
+        if ($_SESSION['user_data']['role'] === "admin"){
             return true;
         }
     }
@@ -86,6 +86,20 @@ function sanitize_array_of($array_data) {
 
     return $retval;
 }
+// functions.php or a new file, e.g., warning_functions.php
+
+function generate_warning_section($title) {
+    return <<<HTML
+    <section class="warning">
+        <div class="warning-banner">
+            <img src="assets/images/lock.png" width="32px" alt="">
+        </div>
+        <h1>MUST BE LOGGED IN TO<br>VIEW <span><?= strtoupper($title) ?></span> PAGE</h1>
+        <a href="login.php">Go to Login</a>
+    </section>
+HTML;
+}
+
 
 
 ?>

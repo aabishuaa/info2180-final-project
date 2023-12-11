@@ -17,7 +17,7 @@ $title = "Users"
     <div class="container">
         <div class="page-title">
             <h1>Users</h1> 
-            <a href="adduser.php"><span><img src="assets/images/add.svg" width="32px" alt="add user"></span>Add User</a>
+            <a href="adduser.php"><span><img src="assets/images/add.png" width="32px" alt="add user"></span>Add User</a>
         </div>
         <div class="content-container">
              <table>

@@ -2,6 +2,7 @@
 require "core/init.php"; 
 require "modules/contact.module.php";
 $title = "Contact";
+$requestedContact = sanitize_array(current_contact_info("all"));
 
 ?>
 
@@ -30,15 +31,15 @@ $title = "Contact";
                     </div>
                     <div class="title-button-container">
                         <p class="assign-warning hide" >Contact Already<br>Assigned To You!</p>
-                        <a href="#" id="assignTM"><span><img src="assets/images/assign.svg"  width="32px" alt=""></span>Assign to me</a>
+                        <a href="#" id="assignTM"><span><img src="assets/images/hand.png"  width="32px" alt=""></span>Assign to me</a>
                         <?php if($requestedContact["type"]=="Sales Lead") { ?>
                             <a href="#" id="switch" class="switch-to-support" >
-                                <span><img src="assets/images/switch-light.svg"  width="32px" alt="switch to support"></span>
+                                <span><img src="assets/images/switch.png"  width="32px" alt="switch to support"></span>
                                 Switch to Support
                             </a>
                         <?php } else { ?>
                             <a href="#" id="switch" class="switch-to-sales" >
-                                <span><img src="assets/images/switch.svg"  width="32px" alt="switch to sales lead"></span>
+                                <span><img src="assets/images/switch.png"  width="32px" alt="switch to sales lead"></span>
                                 Switch to Sales Lead
                             </a>
                         <?php } ?>
@@ -72,7 +73,7 @@ $title = "Contact";
                 <div class="notes-container">
 
                     <div class="notes-header">
-                        <img src="assets/images/notes.svg"  width="32px" alt="">
+                        <img src="assets/images/notes.png"  width="32px" alt="">
                         <p>Notes</p>
                     </div>
 
